@@ -10,7 +10,7 @@ if typing.TYPE_CHECKING:
 
 
 class AdminAccessor(BaseAccessor):
-    async def get_by_email(self, email: str) -> Admin | None:
+    async def get_by_email(self, email: str) -> typing.Optional[Admin]:
         raise NotImplemented
 
     async def create_admin(self, email: str, password: str) -> Admin:
