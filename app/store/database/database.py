@@ -7,7 +7,10 @@ from app.store.database import db
 if TYPE_CHECKING:
     from app.web.app import Application
 
-url = "postgresql+asyncpg://postgres:762063@localhost/victorina"
+#url для локальной работы
+#url = "postgresql+asyncpg://postgres:762063@localhost/victorina"
+#url для тестов
+url = "postgresql+asyncpg://kts_user:kts_pass@127.0.0.1:5432/kts"
 
 class Database:
     def __init__(self, app: "Application"):
