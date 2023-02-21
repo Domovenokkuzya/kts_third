@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from hashlib import sha256
 from typing import Optional
 
-from sqlalchemy import Column, BigInteger
+from sqlalchemy import Column, BigInteger, Text
 
 from app.store.database.sqlalchemy_base import db
 
@@ -24,3 +24,5 @@ class Admin:
 class AdminModel(db):
     __tablename__ = "admins"
     id = Column(BigInteger, primary_key=True)
+    email = Column(Text, nullable=False)
+    password = Column(Text, nullable=False)
